@@ -27,23 +27,50 @@
 //     y:2
 // })
 //+++++++CLASSES+++++++
-var Point = /** @class */ (function () {
-    function Point() {
-    }
-    Point.prototype.draw = function () {
-        console.log('X: ' + this.x + ', Y: ' + this.y);
-    };
-    Point.prototype.getDistance = function (another) {
-        //..
-    };
-    return Point;
-}());
+// class Point{  
+//     x: number;
+//     y: number;
+//     draw(){
+//         console.log('X: ' + this.x + ', Y: ' + this.y);
+//     } 
+//     getDistance(another: Point){
+//         //..
+//     }
+// }
 //+++++++OBJECTS+++++++++
 //let point: Point; // custom type, so we must create a new instance to initialize the object
-var point = new Point();
-point.x = 222;
-point.y = 111;
-point.draw();
+// let point = new Point();
+// point.x = 222;
+// point.y = 111;
+// point.draw();
+//++++++CONSTRUCTORS+++++
+// var Point = /** @class */ (function () {
+//     function Point(x, y) {
+//         this.x = x;
+//         this.y = y;
+//     }
+//     Point.prototype.draw = function () {
+//         console.log('X: ' + this.x + ', Y: ' + this.y);
+//     };
+//     return Point;
+// }());
+// //let point = new Point();  // now we are missing values when we create a new instance of POINT
+// var point = new Point(111, 222);
+// point.draw();
+// //++++++++ACCESS MODIFIERS+++++++++++
+// var Point = /** @class */ (function () {
+//     function Point(x, y) {
+//         this.x = x;
+//         this.y = y;
+//     }
+//     Point.prototype.draw = function () {
+//         console.log('X: ' + this.x + ', Y: ' + this.y);
+//     };
+//     return Point;
+// }());
+// //let point = new Point();  // now we are missing values when we create a new instance of POINT
+// var point = new Point(111, 222);
+// point.draw();
 // function doSomthing(){
 //     for(let i = 0; i < 5; i++){
 //         console.log(i);
@@ -64,9 +91,6 @@ point.draw();
 // const ColorBlue = 2;
 // enum Color{ Red = 0, Green = 1, Blue = 2, Purple = 3}; // values are set automatically, but its good practice to set them incase someone adds a new color
 // let backgroundColor = Color.Red; // much cleaner than js
-
-
-
 //++++++TYPE INSERTION+++++++
 //let message;
 //message = 'abc'; //ts gets confused that message is type any, but we can use type insertion to fix that

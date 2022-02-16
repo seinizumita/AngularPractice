@@ -39,29 +39,94 @@
 
 //+++++++CLASSES+++++++
 
-class Point{  
-    x: number;
-    y: number;
+// class Point{  
+//     x: number;
+//     y: number;
     
     
-    draw(){
-        console.log('X: ' + this.x + ', Y: ' + this.y);
-    } 
+//     draw(){
+//         console.log('X: ' + this.x + ', Y: ' + this.y);
+//     } 
 
-    getDistance(another: Point){
-        //..
-    }
-}
+//     getDistance(another: Point){
+//         //..
+//     }
+// }
 
 //+++++++OBJECTS+++++++++
 
 //let point: Point; // custom type, so we must create a new instance to initialize the object
-let point = new Point();
-point.x = 222;
-point.y = 111;
+// let point = new Point();
+// point.x = 222;
+// point.y = 111;
+// point.draw();
+
+//++++++CONSTRUCTORS+++++
+
+// class Point{  
+//     x: number;
+//     y: number;
+    
+//     constructor(x?: number, y?: number){  // use to initalize parameter types and values|| ? is used to make the values optional
+//         this.x = x;
+//         this.y = y;
+//     }
+    
+//     draw(){
+//         console.log('X: ' + this.x + ', Y: ' + this.y);
+//     } 
+
+// }
+
+
+
+// //let point = new Point();  // now we are missing values when we create a new instance of POINT
+// let point = new Point(111,222);
+// point.draw();
+
+
+
+//++++++++ACCESS MODIFIERS & PROPERTIES+++++++++++
+class Point{  
+    
+    constructor(private _x?: number, private _y?: number){  // use to initalize parameter types and values|| ? is used to make the values optional
+    }
+    
+    draw(){
+        console.log('X: ' + this._x + ', Y: ' + this._y);
+    } 
+
+    get x(){
+        return this._x;
+    }
+
+    set x(value){
+        if (value < 0)
+            throw new Error('value must be larger than 0');
+        
+        this._x = value;
+        
+    }
+
+    get y(){
+        return this._y;
+    }
+
+    set y(value){
+        if (value < 0)
+            throw new Error('value must be larger than 0');
+        
+        this._y = value;
+        
+    }
+
+}
+
+
+let point = new Point(111,222);
+let x = point.x;
+point.x = 1111;
 point.draw();
-
-
 
 
 // function doSomthing(){
