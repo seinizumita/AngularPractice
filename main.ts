@@ -1,9 +1,7 @@
-// import { Point } from '/Users/Sein/ts-hello/point'
+import { Point } from '/Users/Sein/git/AngularPractice/point'
 
-// let point = new Point(1,2);
-// point.draw();
-
-
+let point = new Point(111,222);
+point.draw();
 
 
 //++++++++INTERFACES+++++++++
@@ -87,46 +85,43 @@
 
 
 //++++++++ACCESS MODIFIERS & PROPERTIES+++++++++++
-class Point{  
+// class Point{  
     
-    constructor(private _x?: number, private _y?: number){  // use to initalize parameter types and values|| ? is used to make the values optional
-    }
+//     constructor(private _x?: number, private _y?: number){  // use to initalize parameter types and values|| ? is used to make the values optional
+//     }
     
-    draw(){
-        console.log('X: ' + this._x + ', Y: ' + this._y);
-    } 
+//     draw(){
+//         console.log('X: ' + this._x + ', Y: ' + this._y);
+//     } 
 
-    get x(){
-        return this._x;
-    }
+//     get x(){
+//         return this._x;
+//     }
 
-    set x(value){
-        if (value < 0)
-            throw new Error('value must be larger than 0');
+//     set x(value){
+//         if (value < 0)
+//             throw new Error('value must be larger than 0');
         
-        this._x = value;
+//         this._x = value;
         
-    }
+//     }
 
-    get y(){
-        return this._y;
-    }
+//     get y(){
+//         return this._y;
+//     }
 
-    set y(value){
-        if (value < 0)
-            throw new Error('value must be larger than 0');
+//     set y(value){
+//         if (value < 0)
+//             throw new Error('value must be larger than 0');
         
-        this._y = value;
+//         this._y = value;
         
-    }
+//     }
 
-}
+// }
 
 
-let point = new Point(111,222);
-let x = point.x;
-point.x = 1111;
-point.draw();
+
 
 
 // function doSomthing(){
