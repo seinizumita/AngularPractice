@@ -45,7 +45,7 @@ class Point{
     
     
     draw(){
-        console.log()
+        console.log('X: ' + this.x + ', Y: ' + this.y);
     } 
 
     getDistance(another: Point){
@@ -53,14 +53,13 @@ class Point{
     }
 }
 
+//+++++++OBJECTS+++++++++
 
-
-
-
-
-
-
-
+//let point: Point; // custom type, so we must create a new instance to initialize the object
+let point = new Point();
+point.x = 222;
+point.y = 111;
+point.draw();
 
 
 
